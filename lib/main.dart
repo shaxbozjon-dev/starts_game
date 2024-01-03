@@ -7,9 +7,9 @@ void main() {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,DeviceOrientation.landscapeRight   //ekranni(horizontal) yon tarafga buradi
   ]).whenComplete(() {
-    SystemChrome.setEnabledSystemUIOverlays([
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
       SystemUiOverlay.bottom
-    ])
+    ]);
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Center(
